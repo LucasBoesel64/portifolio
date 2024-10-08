@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Garante que padding e borda sejam incluídos nas dimensões dos elementos */
+}
+
+body {
+    background-color: gray;
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+.container-principal {
+    max-width: 90%;
+    width: auto;
+    /* Aumenta a largura para 900px */
+    height: 1123px;
+    /* Altura correspondente a uma folha de ofício */
+    margin: 5% auto;
+    padding: 0;
+    /* Remove o preenchimento do contêiner principal */
+    background: white;
+    border: 2px solid gray;
+    overflow: hidden;
+    /* Para evitar que o conteúdo ultrapasse os limites */
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    /* Mantém os itens do header em coluna */
+    justify-content: center;
+    /* Centraliza verticalmente o conteúdo do header */
+    align-items: center;
+    /* Centraliza horizontalmente os elementos */
+    padding: 50px 0;
+    /* Preenchimento superior e inferior, remove as laterais */
+    width: 100%;
+    /* O cabeçalho ocupa toda a largura do contêiner pai */
+    background-color: #124b98;
+    /* Cor de fundo do header */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.nome {
+    display: flex;
+    flex-direction: column;
+    /* Mantém os elementos em coluna */
+    align-items: center;
+    /* Centraliza horizontalmente os elementos */
+}
+
+.nome h1 {
+    font-size: 2.8vw;
+    color: white;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.subtitulo h2 {
+    font-size: 25px;
+    /* Tamanho menor para o subtítulo */
+    color: #2fdde7;
+    /* Cor azul clara */
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.redes-sociais {
+    margin-top: 1%;
+    /* Espaço acima do ícone */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
+}
+
+.redes-sociais img {
+    width: 30px;
+    /* Largura do ícone */
+    height: 30px;
+    /* Altura do ícone */
+    transition: transform 0.3s;
+    /* Efeito suave ao passar o mouse */
+}
+
+.redes-sociais img:hover {
+    transform: scale(1.1);
+    /* Aumenta o ícone ao passar o mouse */
+}
+
+.linha-horizontal {
+    border: none;
+    /* Remove a borda padrão */
+    border-bottom: 1px solid #2fdde7;
+    /* Define a cor e a espessura da linha */
+    width: 90%;
+    /* Largura da linha (ajuste conforme necessário) */
+    margin: 5px auto;
+    /* Centraliza a linha com margens superior e inferior */
+}
+
+.linha-horizontal-2 {
+    border: none;
+    /* Remove a borda padrão */
+    border-bottom: 2px solid #124b98;
+    /* Define a cor e a espessura da linha */
+    width: 10%;
+    /* Largura da linha (ajuste conforme necessário) */
+    margin: -939px 330px 0;
+    /* Adiciona margem superior */
+}
+
+.linha-horizontal-3 {
+    border: none;
+    border-bottom: 2px solid #124b98;
+    width: 10%;
+    margin: 143px 330px 0;
+}
+
+.linha-vertical {
+    border-left: 2px solid #124b98;
+    /* Define a cor e a espessura da linha */
+    height: 1000px;
+    /* Altura da linha */
+    width: 0;
+    /* Largura da linha deve ser zero para ficar vertical */
+    margin: -110% 330px 0;
+    /* Adiciona margem superior */
+
+}
+
+.container {
+    width: 250px;
+    /* Largura do container interno */
+    height: 500px;
+    /* Altura do container interno */
+    border-radius: 150px;
+    /* Arredonda os cantos */
+    background-color: white;
+    position: relative;
+    /* Permite posicionamento absoluto para filhos */
+    text-align: center;
+    margin: 2% auto;
+    padding: 5%;
+    left: -320px;
+    /* Move o container para a esquerda */
+    top: -15%;
+    /* Centraliza o container verticalmente */
+    border: 2px solid #124b98;
+    /* Borda azul escura */
+    padding: 250px 30px 30px;
+    /* Aumenta o padding superior para ajustar layout */
+}
+
+.container p {
+    margin: 0;
+    /* Remove margens para alinhamento */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.container p:not(.texto) {
+    color: #2fdde7;
+    /* Define cor azul clara para parágrafos que não são da classe texto */
+    font-size: 18px;
+    /* Define o tamanho da fonte */
+    line-height: 2.5;
+}
+
+.texto {
+    color: black;
+    /* Cor preta para textos específicos */
+    font-size: 16px;
+    /* Tamanho da fonte do texto */
+    margin: 0;
+    text-align: center;
+    /* Centraliza o texto */
+    line-height: 1.2;
+}
+
+.foto-container {
+    width: 210px;
+    /* Define a largura do container de imagem */
+    height: 210px;
+    /* Define a altura do container */
+    border-radius: 50%;
+    /* Faz o container ser redondo */
+    overflow: hidden;
+    /* Esconde o excesso da imagem */
+    position: absolute;
+    /* Posiciona em relação ao container pai */
+    left: 18px;
+    /* Move o container para a esquerda */
+    top: 24%;
+    /* Centraliza o container verticalmente */
+    transform: translateY(-50%);
+    /* Ajusta a posição para centralizar verticalmente */
+    z-index: 2;
+    /* Garante que a foto fique acima de outros elementos */
+}
+
+.foto {
+    width: 100%;
+    height: 100%;
+    /* Faz a imagem ocupar todo o container */
+    object-fit: cover;
+    /* Ajusta a imagem sem distorcer */
+    object-position: center;
+    /* Centraliza a imagem dentro do container */
+}
+
+.container-sobre-mim {
+    width: 125px;
+    /* Largura do container interno */
+    height: auto;
+    /* Altura automática */
+    border-radius: 100px;
+    /* Arredonda os cantos */
+    background-color: #124b98;
+    color: white;
+    text-align: center;
+    position: relative;
+    /* Permite posicionamento absoluto para filhos */
+    margin: 20px auto;
+    /* Cen   traliza o container na página */
+    padding: 5px;
+    left: -80px;
+    /* Move o container para a esquerda */
+    top: -45%;
+    /* Ajusta a posição vertical do container */
+}
+
+.texto-sobre-mim {
+    max-width: 800px;
+    margin: -520px auto 20px;
+    margin-left: 350px;
+    font-size: 16px;
+    text-align: justify;
+    padding: 10px;
+    line-height: 1.2;
+}
+
+.container-educacao {
+    width: 125px;
+    height: auto;
+    border-radius: 100px;
+    background-color: #124b98;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin: 20px auto;
+    padding: 5px;
+    left: -80px;
+    top: 3%;
+}
+
+.texto-educacao {
+    max-width: 800px;
+    margin: 40px auto 20px;
+    margin-left: 350px;
+    font-size: 16px;
+    text-align: justify;
+    padding: 10px;
+    line-height: 1.3;
+}
+
+.texto-azul {
+    color: #2fdde7;
+    margin: -71px auto 20px;
+    margin-left: 460px;
+}
+
+.container-habilidades {
+    width: 135px;
+    height: auto;
+    border-radius: 100px;
+    background-color: #124b98;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin: 20px auto;
+    padding: 5px;
+    left: -405px;
+    top: 3.5%;
+}
+
+.texto-habilidades {
+    max-width: 800px;
+    margin: 40px auto -60px;
+    margin-left: 15px;
+    font-size: 16px;
+    text-align: justify;
+    padding: 10px;
+    line-height: 2.0;
+
+}
+
+.container-navegacao {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding: 220px 0;
+}
+
+.container-voltar,
+.container-avancar {
+    display: flex;
+    align-items: center;
+}
+
+.botao-voltar,
+.botao-avancar {
+    display: inline-block;
+    padding: 0px 20px;
+    background-color: white;
+    color: #124b98;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 60px;
+}
+
+.botao-voltar:hover,
+.botao-avancar:hover {
+    color: #2fdde7;
+}
+
+@media (max-width: 1200px) {
+    .container-principal {
+        width: 90%;
+    }
+
+    .header {
+        padding: 4% 0;
+    }
+
+    .nome h1 {
+        font-size: 6vw;
+    }
+
+    .subtitulo h2 {
+        font-size: 4vw;
+    }
+}
+
+/* Dispositivos Médios */
+@media (max-width: 992px) {
+    .container-principal {
+        width: 95%;
+    }
+
+    .foto-container .foto {
+        max-width: 150px;
+        height: 150px;
+    }
+
+    .texto-sobre-mim, .texto-educacao, .texto-habilidades, .texto-contato {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .github-link {
+        font-size: 16px;
+    }
+}
+
+/* Dispositivos Pequenos (Tablets e Smartphones) */
+@media (max-width: 768px) {
+    .container-principal {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .header {
+        padding: 20px 0;
+    }
+
+    .nome h1 {
+        font-size: 8vw;
+    }
+
+    .subtitulo h2 {
+        font-size: 5vw;
+    }
+
+    .container-navegacao {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botao-voltar, .botao-avancar {
+        font-size: 24px;
+        padding: 5px 10px;
+        margin: 10px 0;
+    }
+
+    .contato-info, .foto-container, .educacao-info, .habilidades, .contato {
+        text-align: center;
+    }
+
+    .educacao-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .linha-vertical {
+        display: none;
+    }
+
+    .linha-horizontal-2, .linha-horizontal-3 {
+        width: 50%;
+    }
+}
+
+/* Dispositivos Muito Pequenos (Smartphones) */
+@media (max-width: 576px) {
+    .nome h1 {
+        font-size: 10vw;
+    }
+
+    .subtitulo h2 {
+        font-size: 6vw;
+    }
+
+    .botao-voltar, .botao-avancar {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+
+    .texto-azul-2 {
+        font-size: 18px;
+    }
+}
